@@ -1,0 +1,23 @@
+.header {
+  background: #2d2d2d;
+  height: 70px;
+
+  color: white;
+  font-size: 24px;
+}
+
+.header-menu {
+  display: flex;
+  width: 70%;
+
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.header-userMenu-personalData {
+  margin-left: 15px;
+}
+
+.header-userMenu-personalData-personalAccount {
+  margin: 15px 0;
+}

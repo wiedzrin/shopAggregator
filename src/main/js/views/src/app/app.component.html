@@ -1,0 +1,70 @@
+<div class="header">
+  <div class="header-menu">
+    <div class="header-logo">
+      Idea Fix
+    </div>
+
+    <div class="header-women">
+      <button mat-button [matMenuTriggerFor]="women">Женское</button>
+      <mat-menu #women="matMenu">
+        <button mat-menu-item>Брюки</button>
+        <button mat-menu-item>Блузки</button>
+      </mat-menu>
+    </div>
+
+    <div class="header-men">
+      <button mat-button [matMenuTriggerFor]="men">Мужское</button>
+      <mat-menu #men="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+
+    <div class="header-children">
+      <button mat-button [matMenuTriggerFor]="children">Детское</button>
+      <mat-menu #children="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+
+    <div class="header-search">
+      <input type="text" placeholder="Что искать?">
+    </div>
+
+    <div class="header-userMenu">
+      <button mat-button [matMenuTriggerFor]="userMenu">User</button>
+      <mat-menu #userMenu="matMenu">
+        <div class="header-userMenu-window">
+          <button mat-button (click)="login()">Войти</button> |
+          <button mat-button (click)="registry()">Регистрация</button>
+
+          <hr>
+
+          <div class="header-userMenu-personalData">
+            <div class="header-userMenu-personalData-personalAccount">
+              <button (click)="openPersonalAccount()">Личный кабинет</button>
+            </div>
+            <div class="header-userMenu-personalData-orders">
+              <button (click)="openOrders()">Мои заказы</button>
+            </div>
+          </div>
+        </div>
+      </mat-menu>
+    </div>
+
+    <div class="header-menu-basket">
+      Basket
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div *ngIf="displayPersonalAccount">
+    <app-personal-account></app-personal-account>
+  </div>
+  <div *ngIf="displayOrders">
+    <app-my-orders></app-my-orders>
+  </div>
+  1234
+</div>
