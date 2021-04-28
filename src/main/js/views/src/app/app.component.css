@@ -8,7 +8,7 @@
 
 .header-menu {
   display: flex;
-  width: 70%;
+  width: 1400px;
 
   justify-content: space-between;
   margin: 0 auto;
@@ -21,3 +21,50 @@
 .header-userMenu-personalData-personalAccount {
   margin: 15px 0;
 }
+
+
+
+
+.content-content {
+  width: 1400px;
+  height: 900px;
+
+  margin: 20px auto;
+  border: black solid 1px;
+}
+
+.content-sectionSelect {
+  display: flex;
+  justify-content: space-between;
+  border: black solid 1px;
+  height: 466px;
+}
+
+.content-sectionSelect-header {
+  text-align: center;
+}
+
+.content-sectionSelect-item {
+  width: 465px;
+  border: black solid 1px;
+  position: relative;
+}
+
+.content-sectionSelect-item:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background: rgba(0, 0, 0, .5);
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+  content: "";
+  z-index: 999;
+}
+.content-sectionSelect-item:hover:before {
+  opacity: 1;
+}
+
+
