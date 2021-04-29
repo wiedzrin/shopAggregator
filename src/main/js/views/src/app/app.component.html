@@ -61,57 +61,50 @@
 
 <div class="content">
   <div class="content-content">
-    <div class="content-sectionSelect-header">
+    <div class="content-header">
       <h1>Выберите интересующий вас раздел</h1>
     </div>
     <div class="content-sectionSelect">
-      <div class="content-sectionSelect-item">
+      <div class="content-sectionSelect-item content-sectionSelect-women">
         <img src="../assets/images/women.jpg" width="100%" alt="">
+        <div class="content-sectionSelect-item-name">
+          <h1>Женское</h1>
+        </div>
       </div>
-      <div class="content-sectionSelect-item">
+      <div class="content-sectionSelect-item content-sectionSelect-children">
         <img src="../assets/images/children.jpg" width="100%" alt="">
+        <div class="content-sectionSelect-item-name">
+          <h1>Детское</h1>
+        </div>
       </div>
-      <div class="content-sectionSelect-item">
+      <div class="content-sectionSelect-item content-sectionSelect-men">
         <img src="../assets/images/men.jpg" width="100%" alt="">
+        <div class="content-sectionSelect-item-name">
+          <h1>Мужское</h1>
+        </div>
       </div>
-<!--      <table class="content-sectionSelect-table">-->
-<!--        <tr>-->
-<!--          <td>-->
-<!--            Women-->
-<!--          </td>-->
-<!--          <td>-->
-<!--            children-->
-<!--          </td>-->
-<!--          <td>-->
-<!--            men-->
-<!--          </td>-->
-<!--        </tr>-->
-<!--      </table>-->
-<!--      <div class="content-sectionSelect-item">-->
-<!--        Женское-->
-<!--      </div>-->
-<!--      <div class="content-sectionSelect-item">-->
-<!--        Детское-->
-<!--      </div>-->
-<!--      <div class="content-sectionSelect-item">-->
-<!--        Мужское-->
-<!--      </div>-->
     </div>
-<!--    <h1>Популярное</h1>-->
-<!--    <div class="content-popularitySlider">-->
-<!--      <div class="content-popularitySlider-item">-->
 
-<!--      </div>-->
-<!--      <div class="content-popularitySlider-item">-->
+    <div>
+      <div class="content-header">
+        <h1>Популярное</h1>
+      </div>
+      <div class="content-popularitySlider">
+        <div class="content-popularitySlider-item">
+          <img src="../assets/images/popularityPhoto.jpg" width="100%" alt="">
+        </div>
+        <div class="content-popularitySlider-item">
+          <img src="../assets/images/popularityPhoto.jpg" width="100%" alt="">
+        </div>
+        <div class="content-popularitySlider-item">
+          <img src="../assets/images/popularityPhoto.jpg" width="100%" alt="">
+        </div>
+        <div class="content-popularitySlider-item">
+          <img src="../assets/images/popularityPhoto.jpg" width="100%" alt="">
+        </div>
+      </div>
 
-<!--      </div>-->
-<!--      <div class="content-popularitySlider-item">-->
-
-<!--      </div>-->
-<!--      <div class="content-popularitySlider-item">-->
-
-<!--      </div>-->
-<!--    </div>-->
+    </div>
   </div>
   <div *ngIf="displayPersonalAccount">
     <app-personal-account></app-personal-account>

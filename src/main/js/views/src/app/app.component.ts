@@ -12,6 +12,7 @@ import {RegistrationComponent} from "./registration/registration.component";
 export class AppComponent {
   displayPersonalAccount = false;
   displayOrders = false;
+  slideIndex:number = 1;
 
   constructor(public dialog: MatDialog) {}
 
