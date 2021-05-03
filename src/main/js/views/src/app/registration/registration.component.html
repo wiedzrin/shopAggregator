@@ -1,35 +1,35 @@
-<form action="">
+<form #registrationForm="ngForm" (ngSubmit)="registry(registrationForm)">
   <div class="registration">
     <h1>Регистрация</h1>
     <p>
       <mat-form-field class="item">
-        <mat-label>First name</mat-label>
-        <textarea matInput placeholder=""></textarea>
+        <mat-label>name</mat-label>
+        <textarea matInput placeholder="" ngModel name="name"></textarea>
       </mat-form-field>
       <mat-form-field class="item">
-        <mat-label>Last name</mat-label>
-        <textarea matInput placeholder=""></textarea>
+        <mat-label>surname</mat-label>
+        <textarea matInput placeholder="" ngModel name="surname"></textarea>
       </mat-form-field>
     </p>
     <p>
       <mat-form-field class="item">
         <mat-label>username</mat-label>
-        <textarea matInput placeholder=""></textarea>
+        <textarea matInput placeholder="" ngModel name="username"></textarea>
       </mat-form-field>
       <mat-form-field class="item">
         <mat-label>password</mat-label>
-        <textarea matInput placeholder=""></textarea>
+        <textarea matInput placeholder="" ngModel name="password"></textarea>
       </mat-form-field>
     </p>
     <p>
       <mat-form-field class="item">
         <mat-label>E-mail</mat-label>
-        <textarea matInput placeholder="12345@mail.ru"></textarea>
+        <textarea matInput placeholder="12345@mail.ru" ngModel name="eMail"></textarea>
       </mat-form-field>
     </p>
 
     <div class="registry-button">
-      <button class="" mat-button color="primary">Зарегистрироваться</button>
+      <button class="" type="submit" mat-button color="primary">Зарегистрироваться</button>
     </div>
 
     <!--    Address-->

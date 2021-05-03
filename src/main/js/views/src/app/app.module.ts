@@ -11,6 +11,8 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from "@angular/forms";
 
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
@@ -31,17 +33,19 @@ const appRoutes: Routes = [
     PersonalAccountComponent,
     MyOrdersComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot(appRoutes),
-    BrowserAnimationsModule,
-    MatMenuModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule
-  ],
+    imports: [
+      BrowserModule,
+      AppRoutingModule,
+      RouterModule.forRoot(appRoutes),
+      BrowserAnimationsModule,
+      MatMenuModule,
+      MatButtonModule,
+      MatDialogModule,
+      MatFormFieldModule,
+      MatInputModule,
+      FormsModule,
+      HttpClientModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

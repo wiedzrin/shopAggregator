@@ -1,14 +1,14 @@
-<form action="">
+<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
   <div class="login">
     <h1>Авторизация</h1>
     <p>
       <mat-form-field class="item">
         <mat-label>username</mat-label>
-        <textarea matInput placeholder=""></textarea>
+        <textarea matInput placeholder="" ngModel name="username"></textarea>
       </mat-form-field>
       <mat-form-field class="item">
         <mat-label>password</mat-label>
-        <textarea matInput placeholder=""></textarea>
+        <textarea matInput placeholder="" ngModel name="password"></textarea>
       </mat-form-field>
     </p>
 
