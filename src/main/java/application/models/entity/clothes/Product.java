@@ -3,24 +3,25 @@ package application.models.entity.clothes;
 import application.models.enums.Season;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 public abstract class Product {
     protected String name;
     protected String type;
     protected BigDecimal price;
-    protected String materials;
     protected Season season;
     protected String color;
     protected String originCountry;
+    protected List<String> img;
 
-    public Product(String name, String type, BigDecimal price, String materials, Season season, String color, String originCountry) {
+    public Product(String name, String type, BigDecimal price, Season season, String color, String originCountry, List<String> img) {
         this.name = name;
         this.type = type;
         this.price = price;
-        this.materials = materials;
         this.season = season;
         this.color = color;
         this.originCountry = originCountry;
+        this.img = img;
     }
 
     public Product() {
@@ -50,14 +51,6 @@ public abstract class Product {
         this.price = price;
     }
 
-    public String getMaterials() {
-        return materials;
-    }
-
-    public void setMaterials(String materials) {
-        this.materials = materials;
-    }
-
     public Season getSeason() {
         return season;
     }
@@ -80,5 +73,13 @@ public abstract class Product {
 
     public void setOriginCountry(String originCountry) {
         this.originCountry = originCountry;
+    }
+
+    public List<String> getImg() {
+        return img;
+    }
+
+    public void setImg(List<String> img) {
+        this.img = img;
     }
 }

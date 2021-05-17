@@ -2,39 +2,66 @@ package application.models.entity.clothes;
 
 import application.models.enums.Season;
 
-import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
-@Entity
-@Table(name = "Shoes")
 public class Shoes extends Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private int size;
+    private List<Double> size;
+    private String upperMaterial;
+    private String internalMaterial;
+    private String soleMaterial;
+    private String insoleMaterial;
 
-    public Shoes(String name, String type, BigDecimal price, String materials, Season season, String color, String originCountry, int size) {
-        super(name, type, price, materials, season, color, originCountry);
+    public Shoes(String name, String type, BigDecimal price, Season season, String color, String originCountry, List<String> img, List<Double> size,
+                 String upperMaterial, String internalMaterial, String soleMaterial, String insoleMaterial) {
+        super(name, type, price, season, color, originCountry, img);
         this.size = size;
+        this.upperMaterial = upperMaterial;
+        this.internalMaterial = internalMaterial;
+        this.soleMaterial = soleMaterial;
+        this.insoleMaterial = insoleMaterial;
     }
 
     public Shoes() {
     }
 
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public int getSize() {
+    public List<Double> getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(List<Double> size) {
         this.size = size;
+    }
+
+    public String getUpperMaterial() {
+        return upperMaterial;
+    }
+
+    public void setUpperMaterial(String upperMaterial) {
+        this.upperMaterial = upperMaterial;
+    }
+
+    public String getInternalMaterial() {
+        return internalMaterial;
+    }
+
+    public void setInternalMaterial(String internalMaterial) {
+        this.internalMaterial = internalMaterial;
+    }
+
+    public String getSoleMaterial() {
+        return soleMaterial;
+    }
+
+    public void setSoleMaterial(String soleMaterial) {
+        this.soleMaterial = soleMaterial;
+    }
+
+    public String getInsoleMaterial() {
+        return insoleMaterial;
+    }
+
+    public void setInsoleMaterial(String insoleMaterial) {
+        this.insoleMaterial = insoleMaterial;
     }
 }
