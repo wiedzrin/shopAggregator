@@ -13,6 +13,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from "@angular/forms";
+import { NgImageSliderModule } from 'ng-image-slider';
 
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
@@ -44,7 +45,8 @@ const appRoutes: Routes = [
       MatFormFieldModule,
       MatInputModule,
       FormsModule,
-      HttpClientModule
+      HttpClientModule,
+      NgImageSliderModule
     ],
   providers: [],
   bootstrap: [AppComponent]

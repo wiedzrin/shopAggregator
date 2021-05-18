@@ -37,4 +37,31 @@ export class AppComponent {
     }
     this.displayOrders = !this.displayOrders;
   }
+
+  imgCollection:Array<object> = [
+    {
+      image: 'https://loremflickr.com/g/600/400/paris',
+      thumbImage: 'https://loremflickr.com/g/1200/800/paris',
+      alt: 'Image 1',
+      title: 'Image 1'
+    }, {
+      image: 'https://loremflickr.com/g/600/400/paris',
+      thumbImage: 'https://loremflickr.com/g/1200/800/paris',
+      alt: 'Image 1',
+      title: 'Image 1'
+    }, {
+      image: 'https://loremflickr.com/g/600/400/paris',
+      thumbImage: 'https://loremflickr.com/g/1200/800/paris',
+      alt: 'Image 1',
+      title: 'Image 1'
+    }, {
+      image: 'https://loremflickr.com/g/600/400/paris',
+      thumbImage: 'https://loremflickr.com/g/1200/800/paris',
+      alt: 'Image 1',
+      title: 'Image 1'
+    }
+  ]
+  width:Number = 500;
+  height:Number = 500;
+
 }

@@ -77,7 +77,7 @@
   padding:10px;
   display:none;
   color: white;
-  opacity: 0.8;
+  opacity: 1;
   z-index: 100;
 }
 
@@ -96,4 +96,49 @@
 .content-popularitySlider {
   display: flex;
   justify-content: space-between;
+}
+
+
+.footer {
+  background: #2d2d2d;
+}
+
+.footer-footer {
+  width: 1400px;
+
+  margin: 20px auto;
+  border: black solid 1px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+
+  color: white;
+  font-size: 18px;
+}
+
+.footer-info {
+  color: #d6d6d6;
+  font-size: 15px;
+  text-align: center;
+
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  color: white;
+  font-size: 26px;
+  padding-left: 80px;
+  margin-top: 20px;
+}
+
+li {
+  list-style-type: none;
+  margin: 20px 0;
+}
+ul {
+  color: #d6d6d6;
+  padding: 0 120px;
 }
