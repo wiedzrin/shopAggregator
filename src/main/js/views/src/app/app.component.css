@@ -58,7 +58,7 @@
   left: 0;
   right: 0;
   opacity: 0;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(19, 19, 19, 0.5);
   -webkit-transition: opacity 0.25s ease-in-out;
   transition: opacity 0.25s ease-in-out;
   content: "";
@@ -96,7 +96,24 @@
 .content-popularitySlider {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
+
+.content-popularitySlider-items {
+}
+.content-sectionSelect-item-name {
+  position: absolute;
+}
+.content-popularitySlider-items:hover .content-sectionSelect-item-name {
+}
+.content-popularitySlider-items:hover .content-sectionSelect-item-name h1 {
+}
+
+/*.content-popularitySlider-item-name-hover:hover {*/
+/*  display: block;*/
+/*}*/
+
+
 
 
 .footer {

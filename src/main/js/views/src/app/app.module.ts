@@ -14,6 +14,7 @@ import { MatInputModule } from "@angular/material/input";
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from "@angular/forms";
 import { NgImageSliderModule } from 'ng-image-slider';
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
@@ -46,7 +47,8 @@ const appRoutes: Routes = [
       MatInputModule,
       FormsModule,
       HttpClientModule,
-      NgImageSliderModule
+      NgImageSliderModule,
+      Ng2CarouselamosModule
     ],
   providers: [],
   bootstrap: [AppComponent]

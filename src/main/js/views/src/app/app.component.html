@@ -90,24 +90,36 @@
         <h1>Популярное</h1>
       </div>
       <div class="content-popularitySlider">
-        <div class="content-popularitySlider-item">
-          <img src="../assets/images/popularityPhoto.jpg" width="100%" alt="">
+        <div ng2-carouselamos
+             [items]="items"
+             [width]="1400"
+             [$prev]="prev"
+             [$next]="next"
+             [$item]="item">
         </div>
-        <div class="content-popularitySlider-item">
-          <img src="../assets/images/popularityPhoto.jpg" width="100%" alt="">
-        </div>
-        <div class="content-popularitySlider-item">
-          <img src="../assets/images/popularityPhoto.jpg" width="100%" alt="">
-        </div>
-        <div class="content-popularitySlider-item">
-          <img src="../assets/images/popularityPhoto.jpg" width="100%" alt="">
-        </div>
+
+        <ng-template #prev>
+          <img src="../assets/images/left-arrow.png" id="left" width="48" height="48">
+        </ng-template>
+
+        <ng-template #next>
+          <img src="../assets/images/right-arrow.png" id="right" width="48" height="48">
+        </ng-template>
+
+        <ng-template #item let-item let-i="index">
+          <div class="content-popularitySlider-items">
+            <img src="{{ item.name }}" width="447px">
+            <div class="content-popularitySlider-item-name content-popularitySlider-item-name-hover">
+              <div>
+                <p><h1>info</h1>
+              </div>
+            </div>
+          </div>
+        </ng-template>
       </div>
-
-      <ng-image-slider [images]="imgCollection" #nav></ng-image-slider>
-
     </div>
   </div>
+
   <div *ngIf="displayPersonalAccount">
     <app-personal-account></app-personal-account>
   </div>

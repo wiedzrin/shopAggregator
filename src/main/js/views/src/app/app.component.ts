@@ -12,9 +12,25 @@ import {RegistrationComponent} from "./registration/registration.component";
 export class AppComponent {
   displayPersonalAccount = false;
   displayOrders = false;
-  slideIndex:number = 1;
 
-  constructor(public dialog: MatDialog) {}
+  items: Array<any> = [];
+
+  constructor(public dialog: MatDialog) {
+    this.items = [
+      { name: '../assets/images/popularityPhoto.jpg' },
+      { name: '../assets/images/popularityPhoto.jpg' },
+      { name: '../assets/images/popularityPhoto.jpg' },
+      { name: '../assets/images/popularityPhoto.jpg' },
+      { name: '../assets/images/popularityPhoto.jpg' },
+      { name: '../assets/images/popularityPhoto.jpg' },
+      { name: '../assets/images/popularityPhoto.jpg' },
+      { name: '../assets/images/popularityPhoto.jpg' },
+      { name: '../assets/images/popularityPhoto.jpg' },
+      { name: '../assets/images/popularityPhoto.jpg' },
+      { name: '../assets/images/popularityPhoto.jpg' },
+      { name: '../assets/images/popularityPhoto.jpg' }
+    ];
+  }
 
   login() {
     this.dialog.open(LoginComponent);
@@ -38,30 +54,5 @@ export class AppComponent {
     this.displayOrders = !this.displayOrders;
   }
 
-  imgCollection:Array<object> = [
-    {
-      image: 'https://loremflickr.com/g/600/400/paris',
-      thumbImage: 'https://loremflickr.com/g/1200/800/paris',
-      alt: 'Image 1',
-      title: 'Image 1'
-    }, {
-      image: 'https://loremflickr.com/g/600/400/paris',
-      thumbImage: 'https://loremflickr.com/g/1200/800/paris',
-      alt: 'Image 1',
-      title: 'Image 1'
-    }, {
-      image: 'https://loremflickr.com/g/600/400/paris',
-      thumbImage: 'https://loremflickr.com/g/1200/800/paris',
-      alt: 'Image 1',
-      title: 'Image 1'
-    }, {
-      image: 'https://loremflickr.com/g/600/400/paris',
-      thumbImage: 'https://loremflickr.com/g/1200/800/paris',
-      alt: 'Image 1',
-      title: 'Image 1'
-    }
-  ]
-  width:Number = 500;
-  height:Number = 500;
 
 }
