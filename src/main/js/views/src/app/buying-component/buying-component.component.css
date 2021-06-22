@@ -1,0 +1,21 @@
+.sneakers-info {
+  width: 600px;
+}
+
+.info {
+  display: flex;
+}
+
+.image {
+  margin-right: 28px;
+}
+
+.header-item {
+  margin-bottom: 20px;
+}
+
+.header-item-item {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 3px;
+}

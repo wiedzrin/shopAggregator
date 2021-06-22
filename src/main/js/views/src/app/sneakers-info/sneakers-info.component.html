@@ -1,0 +1,62 @@
+<div class="sneakers-info" *ngIf="sneakers">
+  <mat-card-header>
+    <mat-card-title>
+      <h1>{{sneakers[0].name}}</h1>
+    </mat-card-title>
+    <mat-card-subtitle>{{sneakers[0].type}}</mat-card-subtitle>
+  </mat-card-header>
+  <p></p>
+  <div class="info">
+    <div class="image">
+      <img mat-card-image [src]="sneakers[0].img">
+    </div>
+    <div>
+      <div class="info-info">
+        <div class="info-item">
+          <div class="header-item">
+            <span class="header-item-item">Материал верха:</span>
+            <span>{{sneakers[0].upperMaterial}}</span><p></p>
+          </div>
+          <div class="header-item">
+            <span class="header-item-item">Внутренний материал:</span>
+            <span>{{sneakers[0].internalMaterial}}</span><p></p>
+          </div>
+          <div class="header-item">
+            <span class="header-item-item">Материал подошвы:</span>
+            <span>{{sneakers[0].soleMaterial}}</span><p></p>
+          </div>
+          <div class="header-item">
+            <span class="header-item-item">Материал стельки:</span>
+            <span>{{sneakers[0].insoleMaterial}}</span><p></p>
+          </div>
+          <div class="header-item">
+            <span class="header-item-item">Сезон:</span>
+            <span><!--{{sneakers[0].season}}-->Демисезон</span><p></p>
+          </div>
+          <div class="header-item">
+            <span class="header-item-item">Цвет:</span>
+            <span>{{sneakers[0].color}}</span><p></p>
+          </div>
+          <div class="header-item">
+            <span class="header-item-item">Страна производитель:</span>
+            <span>{{sneakers[0].originCountry}}</span><p></p>
+          </div>
+          <div class="header-item">
+            <span class="header-item-item">Размер:</span>
+            <span>{{sneakers[0].size}}</span><p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <mat-card-content>
+    <h2>
+      <b>{{sneakers[0].price| number}} ₽</b>
+    </h2>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>Добавить в корзину</button>
+  </mat-card-actions>
+</div>
+

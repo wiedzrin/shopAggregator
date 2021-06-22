@@ -5,7 +5,7 @@
     </div>
 
     <div class="header-women">
-      <button mat-button [matMenuTriggerFor]="women">Женское</button>
+      <button mat-button [matMenuTriggerFor]="women" class="header-menu-item">Женское</button>
       <mat-menu #women="matMenu">
         <button mat-menu-item>Брюки</button>
         <button mat-menu-item>Блузки</button>
@@ -13,15 +13,25 @@
     </div>
 
     <div class="header-men">
-      <button mat-button [matMenuTriggerFor]="men">Мужское</button>
+      <button mat-button [matMenuTriggerFor]="men" class="header-menu-item">Мужское</button>
       <mat-menu #men="matMenu">
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
+        <button mat-menu-item [matMenuTriggerFor]="outerwearMen">Верхняя одежда</button>
+        <button mat-menu-item [matMenuTriggerFor]="shoesMen">Обувь</button>
+      </mat-menu>
+
+      <mat-menu #outerwearMen="matMenu">
+        <button mat-menu-item>Пальто</button>
+        <button mat-menu-item>Рубашки</button>
+        <button mat-menu-item>Футболки</button>
+      </mat-menu>
+      <mat-menu #shoesMen="matMenu">
+        <button mat-menu-item>Кроссовки</button>
+        <button mat-menu-item>Кеды</button>
       </mat-menu>
     </div>
 
     <div class="header-children">
-      <button mat-button [matMenuTriggerFor]="children">Детское</button>
+      <button mat-button [matMenuTriggerFor]="children" class="header-menu-item">Детское</button>
       <mat-menu #children="matMenu">
         <button mat-menu-item>Item 1</button>
         <button mat-menu-item>Item 2</button>
@@ -29,11 +39,13 @@
     </div>
 
     <div class="header-search">
-      <input type="text" placeholder="Что искать?">
+      <input class="header-search-input" type="text" placeholder="Что искать?">
     </div>
 
     <div class="header-userMenu">
-      <button mat-button [matMenuTriggerFor]="userMenu">User</button>
+      <button mat-button [matMenuTriggerFor]="userMenu" class="userMenu-user">
+        <mat-icon class="menu-mat-icon">account_circle</mat-icon>
+      </button>
       <mat-menu #userMenu="matMenu">
         <div class="header-userMenu-window">
           <button mat-button (click)="login()">Войти</button> |
@@ -54,7 +66,7 @@
     </div>
 
     <div class="header-menu-basket">
-      Basket
+      <mat-icon class="menu-mat-icon">local_grocery_store</mat-icon>
     </div>
   </div>
 </div>
@@ -84,41 +96,9 @@
         </div>
       </div>
     </div>
-
-    <div>
-      <div class="content-header">
-        <h1>Популярное</h1>
-      </div>
-      <div class="content-popularitySlider">
-        <div ng2-carouselamos
-             [items]="items"
-             [width]="1400"
-             [$prev]="prev"
-             [$next]="next"
-             [$item]="item">
-        </div>
-
-        <ng-template #prev>
-          <img src="../assets/images/left-arrow.png" id="left" width="48" height="48">
-        </ng-template>
-
-        <ng-template #next>
-          <img src="../assets/images/right-arrow.png" id="right" width="48" height="48">
-        </ng-template>
-
-        <ng-template #item let-item let-i="index">
-          <div class="content-popularitySlider-items">
-            <img src="{{ item.name }}" width="447px">
-            <div class="content-popularitySlider-item-name content-popularitySlider-item-name-hover">
-              <div>
-                <p><h1>info</h1>
-              </div>
-            </div>
-          </div>
-        </ng-template>
-      </div>
-    </div>
   </div>
+
+
 
   <div *ngIf="displayPersonalAccount">
     <app-personal-account></app-personal-account>
@@ -127,6 +107,140 @@
     <app-my-orders></app-my-orders>
   </div>
   1234
+  <button (click)="parseAndSave()">tuts</button>
+
+
+  <div class="searchByCriteria">
+    <div class="category">
+      <div class="category-name">
+        <button mat-button class="category-name-name">Мужские кроссовки</button>
+      </div>
+      <div class="category-amount">
+        [163]
+      </div>
+      <div class="cleaner-criteria">
+        <button mat-button class="cleaner-filters">Очистить фильтры</button>
+      </div>
+    </div>
+    <div class="search-criteria">
+      <div>
+        <mat-form-field appearance="fill" class="criteria-item">
+          <mat-label >Материалы</mat-label>
+          <mat-select>
+            <mat-option value="one">Текстиль</mat-option>
+            <mat-option value="two">Натуральная кожа</mat-option>
+            <mat-option value="two">Искуственная кожа</mat-option>
+            <mat-option value="two">Полиэстер</mat-option>
+            <mat-option value="two">Хлопок</mat-option>
+            <mat-option value="two">Полиуретан</mat-option>
+            <mat-option value="two">Полимер</mat-option>
+            <mat-option value="two">Резина</mat-option>
+            <mat-option value="two">ПВХ</mat-option>
+            <mat-option value="two">Филон</mat-option>
+            <mat-option value="two">Каучук</mat-option>
+            <mat-option value="two">Натуральная замша</mat-option>
+            <mat-option value="two">Искуственная замша</mat-option>
+            <mat-option value="two">Искуственный нубук</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill" class="criteria-item">
+          <mat-label>Цвет</mat-label>
+          <mat-select>
+            <mat-option value="one">Черный</mat-option>
+            <mat-option value="two">Синий</mat-option>
+            <mat-option value="two">Коричневый</mat-option>
+            <mat-option value="two">Белый</mat-option>
+            <mat-option value="two">Серый</mat-option>
+            <mat-option value="two">Бордовой</mat-option>
+            <mat-option value="two">Хаки</mat-option>
+            <mat-option value="two">Розовый</mat-option>
+            <mat-option value="two">Голубой</mat-option>
+            <mat-option value="two">Бежевый</mat-option>
+            <mat-option value="two">Красный</mat-option>
+            <mat-option value="two">Мультиколор</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill" class="criteria-item">
+          <mat-label>Размер</mat-label>
+          <mat-select>
+            <mat-option value="one">36</mat-option>
+            <mat-option value="two">36,5</mat-option>
+            <mat-option value="two">37</mat-option>
+            <mat-option value="two">37,5</mat-option>
+            <mat-option value="two">38</mat-option>
+            <mat-option value="two">38,5</mat-option>
+            <mat-option value="two">39</mat-option>
+            <mat-option value="two">39,5</mat-option>
+            <mat-option value="two">40</mat-option>
+            <mat-option value="two">40,5</mat-option>
+            <mat-option value="two">41</mat-option>
+            <mat-option value="two">41,5</mat-option>
+            <mat-option value="two">42</mat-option>
+            <mat-option value="two">42,5</mat-option>
+            <mat-option value="two">43</mat-option>
+            <mat-option value="two">43,5</mat-option>
+            <mat-option value="two">44</mat-option>
+            <mat-option value="two">44,5</mat-option>
+            <mat-option value="two">45</mat-option>
+            <mat-option value="two">45,5</mat-option>
+            <mat-option value="two">46</mat-option>
+            <mat-option value="two">46,5</mat-option>
+            <mat-option value="two">47</mat-option>
+            <mat-option value="two">47,5</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+         <mat-form-field appearance="fill" class="criteria-item">
+          <mat-label>Бренд</mat-label>
+          <mat-select>
+            <mat-option value="one">Adidas</mat-option>
+            <mat-option value="two">Nike</mat-option>
+            <mat-option value="two">Puma</mat-option>
+            <mat-option value="two">Reebok</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+         <mat-form-field appearance="fill" class="criteria-item">
+          <mat-label>Цена</mat-label>
+          <mat-select>
+            <mat-option value="one">
+              <section class="example-section">
+                <mat-form-field class="example-margin1">
+                  <mat-label>От</mat-label>
+                  <input matInput type="number">
+                </mat-form-field>
+                <mat-form-field class="example-margin2">
+                  <mat-label>До</mat-label>
+                  <input matInput type="number" >
+                </mat-form-field>
+              </section>
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+         <mat-form-field appearance="fill" class="criteria-item">
+          <mat-label>Сезон</mat-label>
+          <mat-select>
+            <mat-option value="one">Демисезон</mat-option>
+            <mat-option value="two">Зима</mat-option>
+            <mat-option value="two">Весна</mat-option>
+            <mat-option value="two">Лето</mat-option>
+            <mat-option value="two">Осень</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+
+
+  <app-sneakers-section></app-sneakers-section>
 </div>
 
 <div class="footer">

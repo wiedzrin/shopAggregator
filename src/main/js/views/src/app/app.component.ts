@@ -3,6 +3,8 @@ import { MatDialog } from "@angular/material/dialog";
 
 import {LoginComponent} from "./login/login.component";
 import {RegistrationComponent} from "./registration/registration.component";
+import {HttpClient} from "@angular/common/http";
+import {BuyingComponentComponent} from "./buying-component/buying-component.component";
 
 @Component({
   selector: 'app-root',
@@ -13,23 +15,7 @@ export class AppComponent {
   displayPersonalAccount = false;
   displayOrders = false;
 
-  items: Array<any> = [];
-
-  constructor(public dialog: MatDialog) {
-    this.items = [
-      { name: '../assets/images/popularityPhoto.jpg' },
-      { name: '../assets/images/popularityPhoto.jpg' },
-      { name: '../assets/images/popularityPhoto.jpg' },
-      { name: '../assets/images/popularityPhoto.jpg' },
-      { name: '../assets/images/popularityPhoto.jpg' },
-      { name: '../assets/images/popularityPhoto.jpg' },
-      { name: '../assets/images/popularityPhoto.jpg' },
-      { name: '../assets/images/popularityPhoto.jpg' },
-      { name: '../assets/images/popularityPhoto.jpg' },
-      { name: '../assets/images/popularityPhoto.jpg' },
-      { name: '../assets/images/popularityPhoto.jpg' },
-      { name: '../assets/images/popularityPhoto.jpg' }
-    ];
+  constructor(public dialog: MatDialog, private http: HttpClient) {
   }
 
   login() {
@@ -39,6 +25,8 @@ export class AppComponent {
   registry() {
     this.dialog.open(RegistrationComponent);
   }
+
+
 
   openPersonalAccount() {
     if (this.displayOrders == true) {
@@ -55,4 +43,7 @@ export class AppComponent {
   }
 
 
+  parseAndSave() {
+    this.http.post("http://localhost:8080/parseAndSaveSneakers", null).subscribe();
+  }
 }

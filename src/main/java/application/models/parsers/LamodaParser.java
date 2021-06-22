@@ -1,19 +1,12 @@
 package application.models.parsers;
 
 import application.models.enums.Season;
-import com.fasterxml.jackson.core.JsonFactory;
+import application.models.service.SneakersParserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.jsoup.nodes.Document;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.Spliterator;
-import java.util.Spliterators;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
 
 public abstract class LamodaParser implements Parser {
     public static final String BASE_URL = "https://www.lamoda.ru/";
@@ -24,10 +17,9 @@ public abstract class LamodaParser implements Parser {
     public static final String PRODUCT_PRICE = "product-prices__price";
     public static final String PRODUCT_ATTRIBUTE = "ii-product__attribute";
 
-    public static void main(String[] args) throws IOException {
-        LamodaParser parser = new SneakersParser();
-        System.out.println();
-    }
+//    public static void main(String[] args) throws IOException {
+//        sneakersParserService.parseAndSave();
+//    }
 
     public Season parseSeason(String season) {
         season = season.toLowerCase();
@@ -46,14 +38,15 @@ public abstract class LamodaParser implements Parser {
         }
     }
 
-    public List<String> getImg(Document docItem) throws JsonProcessingException {
-        JsonFactory factory = new JsonFactory();
-        ObjectMapper mapper = new ObjectMapper(factory);
-        JsonNode rootNode = mapper.readTree(docItem.select("d-gallery-widget").attr(":product-media"));
-
-        Stream<JsonNode> targetStream = StreamSupport.stream(
-                Spliterators.spliteratorUnknownSize(rootNode.get("images").elements(), Spliterator.ORDERED),
-                false);
-        return targetStream.map(e -> BASE_IMG_URL + e.get("src").asText()).collect(Collectors.toList());
+    public String getImg(Document docItem) throws JsonProcessingException {
+//        JsonFactory factory = new JsonFactory();
+//        ObjectMapper mapper = new ObjectMapper(factory);
+//        JsonNode rootNode = mapper.readTree(docItem.select("d-gallery-widget").attr(":product-media"));
+//
+//        Stream<JsonNode> targetStream = StreamSupport.stream(
+//                Spliterators.spliteratorUnknownSize(rootNode.get("images").elements(), Spliterator.ORDERED),
+//                false);
+//        return targetStream.map(e -> BASE_IMG_URL + e.get("src").asText()).collect(Collectors.toList());
+        return docItem.getElementsByClass("x-product-gallery").first().getElementsByTag("img").first().attr("src");
     }
 }
