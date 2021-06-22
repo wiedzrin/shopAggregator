@@ -55,10 +55,10 @@
 
           <div class="header-userMenu-personalData">
             <div class="header-userMenu-personalData-personalAccount">
-              <button (click)="openPersonalAccount()">Личный кабинет</button>
+              <button mat-button (click)="openPersonalAccount()">Личный кабинет</button>
             </div>
             <div class="header-userMenu-personalData-orders">
-              <button (click)="openOrders()">Мои заказы</button>
+              <button mat-button (click)="openOrders()">Мои заказы</button>
             </div>
           </div>
         </div>
@@ -66,7 +66,9 @@
     </div>
 
     <div class="header-menu-basket">
-      <mat-icon class="menu-mat-icon">local_grocery_store</mat-icon>
+      <button mat-button (click)="openBasket()" class="userMenu-basket">
+        <mat-icon class="menu-mat-icon">local_grocery_store</mat-icon>
+      </button>
     </div>
   </div>
 </div>

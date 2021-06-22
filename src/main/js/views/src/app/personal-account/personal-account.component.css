@@ -1,0 +1,24 @@
+.personal-account {
+  width: 680px;
+  height: 340px;
+
+  display: flex;
+}
+
+.personal-account-header {
+  margin-bottom: 50px;
+}
+
+.personal-account-data {
+  margin-left: 75px;
+}
+
+.item {
+  margin: 0px 15px;
+}
+
+.registry-button {
+  margin-top: 10px;
+  font-size: 18px;
+}
+

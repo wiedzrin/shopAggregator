@@ -1,1 +1,45 @@
-<p>personal-account works!</p>
+  <h1 class="personal-account-header">Личный кабинет</h1>
+<div class="personal-account">
+  <div class="personal-account-acc">
+    <div>
+      <h2>Заказы</h2>
+    </div>
+    <div>
+      <h2>Отзывы и вопросы</h2>
+    </div>
+    <div>
+      <h2>Мои данные</h2>
+    </div>
+  </div>
+  <div class="personal-account-data">
+    <h2>Мои данные</h2>
+    <p>
+      <mat-form-field class="item">
+        <mat-label>Имя</mat-label>
+        <textarea matInput placeholder="" ngModel name="name">Вадим</textarea>
+      </mat-form-field>
+      <mat-form-field class="item">
+        <mat-label>Фамилия</mat-label>
+        <textarea matInput placeholder="" ngModel name="surname">Караев</textarea>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="item">
+        <mat-label>Пароль</mat-label>
+        <textarea matInput placeholder="" ngModel name="password">****</textarea>
+      </mat-form-field>
+      <button class="" type="submit" mat-button color="primary">Изменить</button>
+    </p>
+    <p>
+      <mat-form-field class="item">
+        <mat-label>E-mail</mat-label>
+        <textarea matInput placeholder="12345@mail.ru" ngModel name="eMail">wiedzrin@gmail.com</textarea>
+      </mat-form-field>
+      <button class="" type="submit" mat-button color="primary">Изменить</button>
+    </p>
+
+    <div class="">
+      <button class="registry-button" type="submit" mat-button color="primary">Сохранить</button>
+    </div>
+  </div>
+</div>

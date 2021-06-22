@@ -1,0 +1,29 @@
+.basket {
+  height: 500px;
+}
+
+.product {
+  height: 160px;
+  width: 700px;
+  display: flex;
+  border: 1px solid #d9d8d8;
+  margin-top: 10px;
+}
+
+.info {
+  width: 240px;
+}
+
+.image {
+  padding: 20px 0 0 335px;
+  width: 105px;
+}
+
+.buy-button {
+  margin-top: 20px;
+}
+
+.price {
+  margin-top: 20px;
+  margin-left: 15px;
+}

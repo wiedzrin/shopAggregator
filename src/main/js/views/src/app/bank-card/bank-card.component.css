@@ -1,0 +1,27 @@
+.card {
+  width: 350px;
+  height: 320px;
+}
+
+.info-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-date {
+  display: flex;
+}
+
+.item {
+  padding-left: 10px;
+}
+
+.item-date {
+  padding-right: 5px;
+  width: 40px;
+}
+
+.buy-button {
+  padding-left: 150px;
+  font-size: 18px;
+}

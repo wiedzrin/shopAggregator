@@ -1,0 +1,84 @@
+.info {
+  width: 700px;
+  height: 800px;
+}
+
+.personal-info {
+  border: 1px solid #d9d8d8;
+  padding-left: 10px;
+}
+
+.name {
+  display: flex;
+  padding-top: 10px;
+}
+.name-area {
+  width: 225px;
+}
+.name-name {
+  width: 250px;
+}
+.name-surname {
+  width: 250px;
+}
+.surname-area {
+  width: 225px;
+}
+
+.mail-area {
+  width: 225px;
+}
+
+.comment {
+  width: 600px;
+  margin-bottom: 20px;
+}
+.comment-area {
+  width: 500px;
+  height: 200px;
+}
+.comment-header {
+  padding-left: 5px;
+  padding-top: 5px;
+}
+.comment-area-area {
+  width: 500px;
+  height: 200px;
+  border: 1px solid #e5e5e5;
+  padding-left: 10px;
+}
+
+.item {
+  margin: 0px 15px;
+}
+
+.payment-info {
+  border: 1px solid #d9d8d8;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+
+.promocode-header {
+  padding-top: 10px;
+}
+
+.payment-type {
+  margin-top: 20px;
+}
+
+.local-buy {
+  font-weight: 450;
+  font-size: 17px;
+}
+.online-buy {
+  font-weight: 450;
+  font-size: 17px;
+  padding-left: 30px;
+}
+
+.buying {
+  margin-top: 10px;
+  font-size: 18px;
+}

@@ -18,6 +18,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSelectModule} from '@angular/material/select';
 import {NgImageSliderModule} from 'ng-image-slider';
 import {Ng2CarouselamosModule} from 'ng2-carouselamos';
+import {MatRadioModule} from '@angular/material/radio';
 
 import {RegistrationComponent} from './registration/registration.component';
 import {LoginComponent} from './login/login.component';
@@ -27,6 +28,9 @@ import {SneakersSectionComponent} from './sneakers-section/sneakers-section.comp
 import {MatOptionModule} from "@angular/material/core";
 import { BuyingComponentComponent } from './buying-component/buying-component.component';
 import { SneakersInfoComponent } from './sneakers-info/sneakers-info.component';
+import { BasketComponent } from './basket/basket.component';
+import { PaymentComponent } from './payment/payment.component';
+import { BankCardComponent } from './bank-card/bank-card.component';
 
 const appRoutes: Routes = [
   {path: 'personal-account', component: PersonalAccountComponent},
@@ -43,7 +47,10 @@ const appRoutes: Routes = [
     MyOrdersComponent,
     SneakersSectionComponent,
     BuyingComponentComponent,
-    SneakersInfoComponent
+    SneakersInfoComponent,
+    BasketComponent,
+    PaymentComponent,
+    BankCardComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +69,8 @@ const appRoutes: Routes = [
     NgImageSliderModule,
     Ng2CarouselamosModule,
     MatOptionModule,
-    MatSelectModule
+    MatSelectModule,
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,45 @@
+<div class="basket">
+  <h1>Корзина</h1>
+  <div class="product">
+    <div>
+      <mat-card-header>
+        <mat-card-title>
+          <h1 class="info">{{sneakers[0].name}}</h1>
+        </mat-card-title>
+        <mat-card-subtitle>{{sneakers[0].type}}</mat-card-subtitle>
+        <mat-card-subtitle>Размер: 40</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <h2 class="price">
+          <b>Цена: {{sneakers[0].price| number}} ₽</b>
+        </h2>
+      </mat-card-content>
+    </div>
+    <div>
+      <img mat-card-image class="image" [src]="sneakers[0].img">
+    </div>
+  </div>
+  <div class="product">
+    <div>
+      <mat-card-header>
+        <mat-card-title>
+          <h1 class="info">{{sneakers[1].name}}</h1>
+        </mat-card-title>
+        <mat-card-subtitle>{{sneakers[1].type}}</mat-card-subtitle>
+        <mat-card-subtitle>Размер: 39</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <h2 class="price">
+          <b>Цена: {{sneakers[1].price| number}} ₽</b>
+        </h2>
+      </mat-card-content>
+    </div>
+    <div>
+      <img mat-card-image class="image" [src]="sneakers[1].img">
+    </div>
+  </div>
+  <button class="buy-button" type="submit" mat-button (click)="payment()" color="primary">Перейти к оформлению</button>
+</div>
+

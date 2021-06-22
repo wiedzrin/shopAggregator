@@ -1,0 +1,64 @@
+<h1>Оформление заказа</h1>
+<div class="info">
+  <div class="personal-info">
+    <div class="name">
+      <div>
+        <mat-form-field class="item name-area">
+          <mat-label class="name-name-header">Имя</mat-label>
+          <textarea matInput placeholder="" class="name-name" ngModel name="name"></textarea>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="item surname-area">
+          <mat-label>Фамилия</mat-label>
+          <textarea matInput placeholder="" class="name-surname" ngModel name="name"></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+    <div>
+      <mat-form-field class="item">
+        <mat-label>Телефон</mat-label>
+        <textarea matInput placeholder="" ngModel name="name"></textarea>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="item">
+        <mat-label>Населенный пункт</mat-label>
+        <textarea matInput placeholder="" ngModel name="name"></textarea>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="item mail-area">
+        <mat-label>Электронная почта</mat-label>
+        <textarea matInput placeholder="" ngModel name="name"></textarea>
+      </mat-form-field>
+    </div>
+    <div class="comment">
+      <mat-form-field class="item comment-area">
+        <mat-label class="comment-header">Комментарий</mat-label>
+        <textarea matInput class="comment-area-area" placeholder="" ngModel name="name"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="payment-info">
+    <div class="">
+      <h2>2 товара на сумму ****</h2>
+    </div>
+    <div class="promocode">
+      Промокод
+      <mat-form-field class="item">
+        <mat-label></mat-label>
+        <input  matInput placeholder="" class="promocode-header" ngModel name="name">
+      </mat-form-field>
+      <button class="use-promocode" type="submit" mat-button color="primary">Применить</button>
+    </div>
+    <div class="payment-type">
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1" class="local-buy">Оплата при получении</mat-radio-button>
+        <mat-radio-button value="2" class="online-buy">Онлайн оплата</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+  <button class="buying" type="submit" mat-button (click)="payment()" color="primary">Отправить заказ</button>
+</div>
